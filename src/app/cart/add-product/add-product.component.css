@@ -1,0 +1,35 @@
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    width: 400px;
+    height: 400px;
+    border: 1PX solid white;
+    border-radius:10px;
+   
+    
+}
+
+
+.card-title{
+    text-align: center;
+}
+
+.btn{
+    color: var(--primary-color);
+
+}
+.col i{
+    width: 10px;
+    height: 100px;
+    
+}
+h5{
+    text-align: center;
+}
+
+.details{
+    border: 1px solid black;
+    border-radius: 10px;
+}

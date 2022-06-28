@@ -1,0 +1,55 @@
+<section class="cart">
+  <div class="container">
+      <main id="cart" style="max-width:960px">
+          <h1 *ngIf="cart.length">Your Cart</h1>
+
+          <div class="container-fluid">
+            <div class="row align-items-start" *ngIf="cart.length; else elseBlock">
+              <div class="col-12 col-sm-8 items" *ngFor="let cart1 of cart; let i = index">
+                <!--1-->
+                <app-cart-item [product]="cart1" [i]="i" [cart]="cart" [method]="totalCost"></app-cart-item>
+                
+              </div>
+              <div class="col-12 col-sm-4 p-3 proceed form">
+                <div class="row m-0">
+                  <div class="col-sm-8 p-0">
+                    <h6>Subtotal</h6>
+                  </div>
+                  <div class="col-sm-4 p-0">
+                    <p id="subtotal">{{ total | currency: 'ZAR' }}</p>
+                  </div>
+                </div>
+                <div class="row m-0">
+                  <div class="col-sm-8 p-0 ">
+                    <h6>Tax</h6>
+                  </div>
+                  <div class="col-sm-4 p-0">
+                    <p id="tax">{{ total * 0.014 | currency: 'ZAR' }}</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row mx-0 mb-2">
+                  <div class="col-sm-8 p-0 d-inline">
+                    <h5>Total</h5>
+                  </div>
+                  <div class="col-sm-4 p-0">
+                    <p id="total">{{total * 1.014 | currency: 'ZAR'}}  </p>
+                  </div>
+                </div>
+                <button class="btn sucess"  routerLink="/form">Checkout</button>
+              </div>
+            </div>
+            <div class="row align-items-start">
+                <ng-template #elseBlock>
+                    <h2>
+                        Your cart is empty
+                    </h2>
+                </ng-template>
+            </div>
+          </div>
+          
+        </main>
+  </div>
+</section>
+
+

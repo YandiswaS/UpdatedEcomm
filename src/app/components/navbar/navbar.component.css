@@ -1,0 +1,16 @@
+.logo{
+    background-image: url(../../../assets/Tasty_Meals_Joint-removebg-preview.png);
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.navbar-light .navbar-nav .nav-link
+{
+    color: var(--secondary-color);
+}
+.navbar-light .navbar-nav .nav-link.active-link
+{
+    color: var(--primary-color);
+   
+}

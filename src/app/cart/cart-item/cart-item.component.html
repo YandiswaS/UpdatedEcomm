@@ -1,0 +1,24 @@
+<div class="container" *ngIf="product">
+  <div class="card" style="width:600px; margin-top:10px;">
+  <div class="cartItem row align-items-start" >
+    <div class="col-3 mb-2">
+      <img class="w-100" [src]="product.image" [alt]="product.title">
+    </div>
+    <div class="col-5 mb-2">
+  
+      <p class="pl-1 mb-0">{{product.name}}</p>
+   
+    <div class="col-2">
+      <p class="cartItemQuantity p-1 text-center">
+        {{product.quantity}} 
+        <input type="number" name="" min="1" id="" [(ngModel)]="value"> 
+        <button class="btn btn-sucess" (click)="editCart()">Edit</button> 
+        <button class="btn btn-sucess" (click)="deleteItem()">Delete</button> 
+      </p>
+    </div>
+    <div class="col-2">
+      <p id="cartItem1Price">R{{product.price}}</p>
+    </div>
+  </div>
+</div>
+</div>
